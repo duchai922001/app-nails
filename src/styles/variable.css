@@ -1,0 +1,19 @@
+:root {
+  /*Cỡ chữ*/
+  --font-size-title: 32px;
+  --font-size-normal: 24px;
+  --font-size-content: 18px;
+  --font-size-des: 16px;
+
+  /* border-radius */
+  --border-card: 8px;
+  --border-image: 6px;
+  --border-btn: 4px;
+  /* color */
+  --primary-color: rgb(0, 119, 255);
+  --secondary-color: yellow;
+  --third-color: green;
+
+  /* gap */
+  --gap-basic: 12px;
+}
