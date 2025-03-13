@@ -5,6 +5,7 @@ import axios from "axios";
 import Service from "./service";
 //khai báo
 const Home = () => {
+  const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [dataService, setDataService] = useState([]);
   const [loading, setLoading] = useState(false);
