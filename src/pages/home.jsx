@@ -3,9 +3,10 @@ import MCard from "../components/basicUI/m-card";
 import { Button, Col, message, Row, Spin } from "antd";
 import axios from "axios";
 import Service from "./service";
+import Feedback from "./feedback";
 //khai báo
 const Home = () => {
-  const [count, setCount] = useState(0);
+  const [isOpenFeedback, setIsOpenFeedback] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [dataService, setDataService] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -59,6 +60,7 @@ const Home = () => {
         ))}
       </Row>
       <Button onClick={() => setIsOpen(true)}>Booking now</Button>
+      <button onClick={() => setIsOpenFeedback(true)}>Feedback</button>
       <Service
         isOpenModal={isOpen}
         handleCancel={handleCancelModal}
@@ -66,6 +68,7 @@ const Home = () => {
         inputValue={inputValue}
         handleSubmit={handleSubmit}
       />
+      <Feedback isOpen={isOpenFeedback} />
     </Spin>
   );
 };
